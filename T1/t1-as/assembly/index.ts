@@ -24,7 +24,7 @@ export function greedy_snake_move(snakeBody: i32[], food: i32[]): i32 {
   if (dx !== 0) {
     oppositeDir = dx === 1 ? 1 : 3; // 原方向右(3)→反左(1), 原左(1)→反右(3)
   } else {
-    oppositeDir = dy === 1 ? 0 : 2; // 原方向下(2)→反上(0), 原上(0)→反下(2)
+    oppositeDir = dy === 1 ? 2 : 0; // 原方向上(0)→反下(2), 原下(2)→反上(0)
   }
 
   //排除反方向
