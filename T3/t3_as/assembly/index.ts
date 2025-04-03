@@ -17,10 +17,10 @@ export function greedy_snake_step(n: i32, snake_Body: i32[], snake_num: i32, oth
         }
         if (i % 8 === 0) {
             // 蛇头
-            all_possible_barriers.add((other_snakes_Body[i] - 1) * 100 + (other_snakes_Body[i + 1] - 1));
-            all_possible_barriers.add((other_snakes_Body[i] - 1) * 100 + (other_snakes_Body[i + 1] + 1));
-            all_possible_barriers.add((other_snakes_Body[i] + 1) * 100 + (other_snakes_Body[i + 1] - 1));
-            all_possible_barriers.add((other_snakes_Body[i] + 1) * 100 + (other_snakes_Body[i + 1] + 1));
+            all_possible_barriers.add((other_snakes_Body[i] - 1) * 100 + other_snakes_Body[i + 1]);
+            all_possible_barriers.add((other_snakes_Body[i] + 1) * 100 + other_snakes_Body[i + 1]);
+            all_possible_barriers.add(other_snakes_Body[i] * 100 + (other_snakes_Body[i + 1] - 1));
+            all_possible_barriers.add(other_snakes_Body[i] * 100 + (other_snakes_Body[i + 1] + 1));
         }
     }
 
